@@ -1,4 +1,6 @@
+import { type ClassValue, clsx } from 'clsx';
 import type { LocalePrefix } from 'next-intl/dist/types/src/shared/types';
+import { twMerge } from 'tailwind-merge';
 
 const localePrefix: LocalePrefix = 'as-needed';
 
@@ -9,3 +11,7 @@ export const AppConfig = {
   defaultLocale: 'en',
   localePrefix,
 };
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
 import { Sponsors } from '@/components/Sponsors';
+import { Button } from '@/components/ui/button';
 
 export async function generateMetadata({
   params: { locale },
@@ -35,6 +36,7 @@ export default function Index() {
       <h2 className="mt-5 text-2xl font-bold">
         Boilerplate code for your Nextjs project with Tailwind CSS
       </h2>
+      <Button>Button</Button>
       <p>
         <span role="img" aria-label="rocket">
           🚀
